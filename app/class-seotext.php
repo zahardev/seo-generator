@@ -33,9 +33,9 @@ class Seotext {
             $position = Settings::get_option( 'seo_text_position' );
 
             switch ( $position ) {
-                case 'before_content':
-                    return $content . '<br>' . $seo_text;
                 case 'after_content':
+                    return $content . '<br>' . $seo_text;
+                case 'before_content':
                     return $seo_text . '<br>' . $content;
                 case 'shortcode':
                     add_shortcode( self::SHORTCODE, function () use ( $seo_text ) {
