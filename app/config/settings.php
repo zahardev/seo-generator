@@ -2,10 +2,10 @@
 
 return [
     'seo_generator_settings' => [
-        'title'  => __( 'SEO Generator Settings', SEO_GEN_PLUGIN_BASENAME ),
+        'title'  => __( 'SEO Generator Settings', SEOGEN_PLUGIN_BASENAME ),
         'fields' => [
             'seo_text_position'    => [
-                'title'   => __( 'Where do you want to show SEO text?', SEO_GEN_PLUGIN_BASENAME ),
+                'title'   => __( 'Where do you want to show SEO text?', SEOGEN_PLUGIN_BASENAME ),
                 'type'    => 'select',
                 'options' => [
                     'before_content' => 'Before content',
@@ -15,8 +15,12 @@ return [
                 ],
                 'default' => 'after_content',
             ],
-            'regenerate_seo_texts' => [
-                'title' => __( 'Regenerate SEO texts', SEO_GEN_PLUGIN_BASENAME ),
+            'generate_seo_texts' => [
+                'title' => __( 'Generate SEO texts', SEOGEN_PLUGIN_BASENAME ),
+                'type'  => 'checkbox',
+            ],
+            'overwrite_previous_seo_texts' => [
+                'title' => __( 'Overwrite previously generated SEO texts', SEOGEN_PLUGIN_BASENAME ),
                 'type'  => 'checkbox',
             ],
         ],

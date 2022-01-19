@@ -1,25 +1,25 @@
 <?php
 
 $labels = [
-    'name'               => _x( 'SEO Texts', 'Post Type General Name', SEO_GEN_PLUGIN_BASENAME ),
-    'singular_name'      => _x( 'SEO Text', 'Post Type Singular Name', SEO_GEN_PLUGIN_BASENAME ),
-    'menu_name'          => __( 'SEO Texts', SEO_GEN_PLUGIN_BASENAME ),
-    'parent_item_colon'  => __( 'Parent SEO Text', SEO_GEN_PLUGIN_BASENAME ),
-    'all_items'          => __( 'All SEO Texts', SEO_GEN_PLUGIN_BASENAME ),
-    'view_item'          => __( 'View SEO Text', SEO_GEN_PLUGIN_BASENAME ),
-    'add_new_item'       => __( 'Add New SEO Text', SEO_GEN_PLUGIN_BASENAME ),
-    'add_new'            => __( 'Add New', SEO_GEN_PLUGIN_BASENAME ),
-    'edit_item'          => __( 'Edit SEO Text', SEO_GEN_PLUGIN_BASENAME ),
-    'update_item'        => __( 'Update SEO Text', SEO_GEN_PLUGIN_BASENAME ),
-    'search_items'       => __( 'Search SEO Text', SEO_GEN_PLUGIN_BASENAME ),
-    'not_found'          => __( 'Not Found', SEO_GEN_PLUGIN_BASENAME ),
-    'not_found_in_trash' => __( 'Not found in Trash', SEO_GEN_PLUGIN_BASENAME ),
+    'name'               => _x( 'SEO Texts', 'Post Type General Name', SEOGEN_PLUGIN_BASENAME ),
+    'singular_name'      => _x( 'SEO Text', 'Post Type Singular Name', SEOGEN_PLUGIN_BASENAME ),
+    'menu_name'          => __( 'SEO Texts', SEOGEN_PLUGIN_BASENAME ),
+    'parent_item_colon'  => __( 'Parent SEO Text', SEOGEN_PLUGIN_BASENAME ),
+    'all_items'          => __( 'All SEO Texts', SEOGEN_PLUGIN_BASENAME ),
+    'view_item'          => __( 'View SEO Text', SEOGEN_PLUGIN_BASENAME ),
+    'add_new_item'       => __( 'Add New SEO Text', SEOGEN_PLUGIN_BASENAME ),
+    'add_new'            => __( 'Add New', SEOGEN_PLUGIN_BASENAME ),
+    'edit_item'          => __( 'Edit SEO Text', SEOGEN_PLUGIN_BASENAME ),
+    'update_item'        => __( 'Update SEO Text', SEOGEN_PLUGIN_BASENAME ),
+    'search_items'       => __( 'Search SEO Text', SEOGEN_PLUGIN_BASENAME ),
+    'not_found'          => __( 'Not Found', SEOGEN_PLUGIN_BASENAME ),
+    'not_found_in_trash' => __( 'Not found in Trash', SEOGEN_PLUGIN_BASENAME ),
 ];
 
 
 return [
-    'label'               => __( 'SEO Text', SEO_GEN_PLUGIN_BASENAME ),
-    'description'         => __( 'SEO Text news and reviews', SEO_GEN_PLUGIN_BASENAME ),
+    'label'               => __( 'SEO Text', SEOGEN_PLUGIN_BASENAME ),
+    'description'         => __( 'SEO Text news and reviews', SEOGEN_PLUGIN_BASENAME ),
     'labels'              => $labels,
     'supports'            => [ 'title', 'editor', 'author', 'revisions' ],
     'hierarchical'        => false,

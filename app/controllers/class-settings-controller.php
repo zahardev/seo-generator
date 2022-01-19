@@ -1,22 +1,25 @@
 <?php
 
-namespace SEO_Generator;
+namespace SEO_Generator\Controllers;
 
-class Settings {
+use SEO_Generator\Services\SEO_Generator;
+
+class Settings_Controller {
 
     protected static $options;
 
     protected static $settings;
 
     public static function init() {
-        self::$settings = include __DIR__ . '/config/settings.php';
+        self::$settings = include SEOGEN_PLUGIN_DIR . 'app/config/settings.php';
 
         add_action( 'admin_menu', [ self::class, 'add_admin_menu' ] );
         add_action( 'admin_init', [ self::class, 'settings_init' ] );
+        add_filter( 'pre_update_option_seo_generator_settings', [ SEO_Generator::class, 'generate' ] );
     }
 
     public static function add_admin_menu() {
-        add_submenu_page( 'edit.php?post_type=seotext', __( 'SEO Generator Settings', SEO_GEN_PLUGIN_BASENAME ), __( 'Settings', SEO_GEN_PLUGIN_BASENAME ), 'manage_options', 'seo-generator-settings', [
+        add_submenu_page( 'edit.php?post_type=seotext', __( 'SEO Generator Settings', SEOGEN_PLUGIN_BASENAME ), __( 'Settings', SEOGEN_PLUGIN_BASENAME ), 'manage_options', 'seo-generator-settings', [
             self::class,
             'options_page',
         ] );
@@ -116,11 +119,6 @@ class Settings {
     }
 
     public static function options_page() {
-        if ( ! function_exists( 'acf_get_field' ) ) {
-            echo '<h2>Please install <a href="https://wordpress.org/plugins/advanced-custom-fields/">Advanced Custom Fields</a> plugin first!</h2>';
-
-            return;
-        }
         ?>
 
         <form action='options.php' method='post'>
